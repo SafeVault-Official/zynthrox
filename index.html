@@ -1,74 +1,154 @@
 <!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZYNTHROX | Global Micro-Mining & Dev Ecosystem</title>
+    <title>ZYNTHROX GLOBAL | Technology Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #fafafa; font-family: 'Inter', sans-serif; }
-        .neon-green { color: #00ff41; text-shadow: 0 0 15px rgba(0, 255, 65, 0.6); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .lang-btn { font-size: 0.7rem; padding: 2px 8px; border: 1px solid #333; border-radius: 4px; transition: 0.3s; }
-        .lang-btn:hover { border-color: #00ff41; color: #00ff41; }
+        body { background-color: #030303; color: #ffffff; font-family: 'Space Grotesk', sans-serif; }
+        .neon-border { border: 1px solid #1a1a1a; transition: 0.4s; }
+        .neon-border:hover { border-color: #00ff41; box-shadow: 0 0 20px rgba(0, 255, 65, 0.1); }
+        .lang-active { color: #00ff41; border-bottom: 2px solid #00ff41; }
     </style>
 </head>
-<body class="bg-[#050505]">
+<body>
 
-    <div class="w-full glass py-2 px-4 flex justify-center gap-2 flex-wrap">
-        <button class="lang-btn">TR</button>
-        <button class="lang-btn">EN</button>
-        <button class="lang-btn">FR</button>
-        <button class="lang-btn">ES</button>
-        <button class="lang-btn">RU</button>
-        <button class="lang-btn">HI</button>
-        <button class="lang-btn">ZH</button>
-    </div>
-
-    <nav class="w-full glass py-4 px-8 flex justify-between items-center sticky top-0 z-50">
-        <div class="text-2xl font-900 tracking-tighter neon-green">ZYNTHROX</div>
-        <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">
-            <a href="#about" class="hover:text-white transition">Product</a>
-            <a href="#specs" class="hover:text-white transition">Technical</a>
-            <a href="#hub" class="hover:text-white transition">Developer Hub</a>
-        </div>
-        <button class="border border-green-500 text-green-500 text-[10px] font-bold px-6 py-2 rounded-sm hover:bg-green-500 hover:text-black transition">PRE-ORDER</button>
+    <nav class="w-full border-b border-white/5 py-4 px-6 flex flex-wrap justify-center gap-6 text-[11px] font-bold tracking-widest text-gray-500">
+        <button onclick="changeLang('tr')" id="btn-tr" class="lang-active uppercase hover:text-white transition">Türkçe</button>
+        <button onclick="changeLang('en')" id="btn-en" class="uppercase hover:text-white transition">English</button>
+        <button onclick="changeLang('fr')" id="btn-fr" class="uppercase hover:text-white transition">Français</button>
+        <button onclick="changeLang('es')" id="btn-es" class="uppercase hover:text-white transition">Español</button>
+        <button onclick="changeLang('ru')" id="btn-ru" class="uppercase hover:text-white transition">Русский</button>
+        <button onclick="changeLang('hi')" id="btn-hi" class="uppercase hover:text-white transition">हिन्दी</button>
+        <button onclick="changeLang('zh')" id="btn-zh" class="uppercase hover:text-white transition">中文</button>
     </nav>
 
-    <section class="h-[80vh] flex flex-col items-center justify-center text-center px-6">
-        <h1 class="text-5xl md:text-8xl font-900 mb-6 tracking-tighter leading-none uppercase">
-            ZYNTHROX <span class="neon-green">V1</span>
-        </h1>
-        <p class="max-w-2xl text-gray-400 text-sm md:text-base mb-10 leading-relaxed font-light uppercase tracking-widest">
-            (TR) Kazmaya Başla | (EN) Start Mining | (FR) Commencer le Minage | (ES) Empezar a Minar | (RU) Начать майнинг | (HI) माइनिंग शुरू करें | (ZH) 开始挖矿
+    <main class="h-screen flex flex-col items-center justify-center text-center px-4">
+        <div class="mb-2 text-green-500 text-[10px] tracking-[0.5em] font-bold uppercase" id="tagline">Global Tech Alliance</div>
+        <h1 class="text-7xl md:text-9xl font-bold tracking-tighter mb-8 italic" id="main-title">ZYNTHROX</h1>
+        
+        <p class="max-w-2xl text-gray-400 text-sm md:text-base mb-12 leading-relaxed tracking-wide uppercase" id="description">
+            Yeni Nesil Mikro-Mining ve Geliştirme Platformu. Sınırları Malatya'dan Dünyaya Taşıyoruz.
         </p>
-        <div class="flex gap-4">
-            <a href="#hub" class="bg-white text-black font-bold py-4 px-10 text-xs tracking-widest hover:bg-green-500 transition">DOCS & CODE</a>
-            <a href="#specs" class="border border-white/20 py-4 px-10 text-xs tracking-widest hover:bg-white/5 transition">SPECS</a>
-        </div>
-    </section>
 
-    <section id="hub" class="py-20 bg-[#080808] border-y border-white/5">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h2 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Developer <span class="neon-green">Hub</span></h2>
-            <p class="text-gray-500 text-sm mb-8">ZYNTHROX topluluğuna katılın, kod kütüphanelerine erişin ve global geliştirici ağının bir parçası olun.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="glass p-6 rounded-lg text-left">
-                    <h4 class="font-bold text-green-500 mb-2">GitHub Docs</h4>
-                    <p class="text-xs text-gray-400">Tüm şemalar ve ZYNTHROX OS kaynak kodları.</p>
-                </div>
-                <div class="glass p-6 rounded-lg text-left">
-                    <h4 class="font-bold text-green-500 mb-2">Global Community</h4>
-                    <p class="text-xs text-gray-400">Geliştiricilerle anlık iletişim kanalı.</p>
-                </div>
+        <div class="flex flex-col md:flex-row gap-6">
+            <button class="bg-white text-black font-bold py-5 px-14 text-[10px] tracking-[0.3em] uppercase hover:bg-green-500 transition shadow-2xl" id="btn-preorder">Pre-Order Now</button>
+            <button class="border border-white/10 font-bold py-5 px-14 text-[10px] tracking-[0.3em] uppercase hover:bg-white/5 transition" id="btn-docs">Technical Docs</button>
+        </div>
+    </main>
+
+    <section class="py-24 bg-[#080808]">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div class="neon-border p-12 rounded-lg">
+                <h3 class="text-green-500 font-bold text-xs tracking-[0.3em] mb-4 uppercase" id="card1-title">Hardware Architecture</h3>
+                <p class="text-gray-400 text-sm leading-loose" id="card1-desc">9x15 cm özel tasarım kart yapısı. Maksimum verim, minimum enerji tüketimi.</p>
+            </div>
+            <div class="neon-border p-12 rounded-lg">
+                <h3 class="text-green-500 font-bold text-xs tracking-[0.3em] mb-4 uppercase" id="card2-title">Open Ecosystem</h3>
+                <p class="text-gray-400 text-sm leading-loose" id="card2-desc">ZYNTHROX OS ile tam entegre çalışın veya kendi yazılımınızı dünyaya duyurun.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-[10px] text-gray-600 tracking-[0.4em] uppercase">
-        &copy; 2026 ZYNTHROX TECHNOLOGY CORP. - MALATYA HQ
-    </footer>
+    <script>
+        const data = {
+            tr: {
+                tagline: "Küresel Teknoloji İttifakı",
+                title: "ZYNTHROX",
+                desc: "Yeni Nesil Mikro-Mining ve Geliştirme Platformu. Sınırları Malatya'dan Dünyaya Taşıyoruz.",
+                preorder: "ÖN SİPARİŞ VER",
+                docs: "TEKNİK BELGELER",
+                c1t: "Donanım Mimarisi",
+                c1d: "9x15 cm özel tasarım kart yapısı. Maksimum verim, minimum enerji tüketimi.",
+                c2t: "Açık Ekosistem",
+                c2d: "ZYNTHROX OS ile tam entegre çalışın veya kendi yazılımınızı dünyaya duyurun."
+            },
+            en: {
+                tagline: "Global Tech Alliance",
+                title: "ZYNTHROX",
+                desc: "Next-Gen Micro-Mining & Dev Platform. Carrying boundaries from Malatya to the World.",
+                preorder: "PRE-ORDER NOW",
+                docs: "TECHNICAL DOCS",
+                c1t: "Hardware Architecture",
+                c1d: "9x15 cm custom board design. Maximum efficiency, minimum energy consumption.",
+                c2t: "Open Ecosystem",
+                c2d: "Work fully integrated with ZYNTHROX OS or share your own software with the world."
+            },
+            fr: {
+                tagline: "Alliance Technologique Mondiale",
+                title: "ZYNTHROX",
+                desc: "Plateforme de Micro-Minage et de Développement. Transporter les frontières de Malatya vers le monde.",
+                preorder: "PRÉ-COMMANDER",
+                docs: "DOCS TECHNIQUES",
+                c1t: "Architecture Matérielle",
+                c1d: "Conception de carte personnalisée 9x15 cm. Efficacité maximale, consommation d'énergie minimale.",
+                c2t: "Écosystème Ouvert",
+                c2d: "Travaillez pleinement intégré à ZYNTHROX OS ou partagez votre propre logiciel."
+            },
+            es: {
+                tagline: "Alianza Tecnológica Global",
+                title: "ZYNTHROX",
+                desc: "Plataforma de Micro-Minería y Desarrollo. Llevando las fronteras de Malatya al Mundo.",
+                preorder: "RESERVAR AHORA",
+                docs: "DOCS TÉCNICOS",
+                c1t: "Arquitectura de Hardware",
+                c1d: "Diseño de placa personalizada de 9x15 cm. Máxima eficiencia, mínimo consumo.",
+                c2t: "Ecosistema Abierto",
+                c2d: "Trabaje totalmente integrado con ZYNTHROX OS o comparta su software."
+            },
+            ru: {
+                tagline: "Глобальный Технологический Альянс",
+                title: "ZYNTHROX",
+                desc: "Платформа микромайнинга и разработки. Расширяем границы от Малатьи до всего мира.",
+                preorder: "ПРЕДЗАКАЗ",
+                docs: "ДОКУМЕНТАЦИЯ",
+                c1t: "Архитектура оборудования",
+                c1d: "Специальная плата 9x15 см. Максимальная эффективность, минимум энергии.",
+                c2t: "Открытая экосистема",
+                c2d: "Интеграция с ZYNTHROX OS или запуск собственного ПО."
+            },
+            hi: {
+                tagline: "वैश्विक तकनीकी गठबंधन",
+                title: "ZYNTHROX",
+                desc: "अगली पीढ़ी का माइक्रो-माइनिंग और देव प्लेटफॉर्म। सीमाओं को मालत्या से दुनिया तक ले जाना।",
+                preorder: "अभी प्री-ऑर्डर करें",
+                docs: "तकनीकी दस्तावेज",
+                c1t: "हार्डवेयर आर्किटेक्चर",
+                c1d: "9x15 सेमी कस्टम बोर्ड डिजाइन। अधिकतम दक्षता, न्यूनतम ऊर्जा खपत।",
+                c2t: "ओपन इकोसिस्टम",
+                c2d: "ZYNTHROX OS के साथ पूरी तरह से एकीकृत काम करें या अपना सॉफ्टवेयर साझा करें।"
+            },
+            zh: {
+                tagline: "全球技术联盟",
+                title: "ZYNTHROX",
+                desc: "下一代微型挖矿和开发平台。将边界从马拉蒂亚推向世界。",
+                preorder: "立即预订",
+                docs: "技术文档",
+                c1t: "硬件架构",
+                c1d: "9x15 厘米定制板设计。最高效率，最低能耗。",
+                c2t: "开放生态系统",
+                c2d: "与 ZYNTHROX OS 完全集成，或向世界分享您的软件。"
+            }
+        };
 
+        function changeLang(lang) {
+            // Buton aktiflik sınıflarını temizle
+            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('lang-active'));
+            document.getElementById('btn-' + lang).classList.add('lang-active');
+
+            // İçerikleri güncelle
+            document.getElementById('tagline').innerText = data[lang].tagline;
+            document.getElementById('main-title').innerText = data[lang].title;
+            document.getElementById('description').innerText = data[lang].desc;
+            document.getElementById('btn-preorder').innerText = data[lang].preorder;
+            document.getElementById('btn-docs').innerText = data[lang].docs;
+            document.getElementById('card1-title').innerText = data[lang].c1t;
+            document.getElementById('card1-desc').innerText = data[lang].c1d;
+            document.getElementById('card2-title').innerText = data[lang].c2t;
+            document.getElementById('card2-desc').innerText = data[lang].c2d;
+        }
+    </script>
 </body>
 </html>
