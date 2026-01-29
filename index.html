@@ -1,97 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZYNTHROX | Next-Gen Micro-Mining & Dev Board</title>
+    <title>ZYNTHROX | Global Micro-Mining & Dev Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #fafafa; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { background-color: #050505; color: #fafafa; font-family: 'Inter', sans-serif; }
         .neon-green { color: #00ff41; text-shadow: 0 0 15px rgba(0, 255, 65, 0.6); }
-        .bg-gradient { background: radial-gradient(circle at center, #111 0%, #050505 100%); }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .zynthrox-card { border: 1px solid #222; transition: all 0.5s ease; }
-        .zynthrox-card:hover { border-color: #00ff41; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 255, 65, 0.1); }
+        .lang-btn { font-size: 0.7rem; padding: 2px 8px; border: 1px solid #333; border-radius: 4px; transition: 0.3s; }
+        .lang-btn:hover { border-color: #00ff41; color: #00ff41; }
     </style>
 </head>
-<body class="bg-gradient">
+<body class="bg-[#050505]">
 
-    <nav class="fixed w-full z-50 glass py-4 px-8 flex justify-between items-center">
+    <div class="w-full glass py-2 px-4 flex justify-center gap-2 flex-wrap">
+        <button class="lang-btn">TR</button>
+        <button class="lang-btn">EN</button>
+        <button class="lang-btn">FR</button>
+        <button class="lang-btn">ES</button>
+        <button class="lang-btn">RU</button>
+        <button class="lang-btn">HI</button>
+        <button class="lang-btn">ZH</button>
+    </div>
+
+    <nav class="w-full glass py-4 px-8 flex justify-between items-center sticky top-0 z-50">
         <div class="text-2xl font-900 tracking-tighter neon-green">ZYNTHROX</div>
-        <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest text-gray-400">
-            <a href="#about" class="hover:text-white transition">HAKKINDA</a>
-            <a href="#specs" class="hover:text-white transition">TEKNİK</a>
-            <a href="https://t.me/SafeVaultProtocol" class="hover:text-white transition">TOPLULUK</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">
+            <a href="#about" class="hover:text-white transition">Product</a>
+            <a href="#specs" class="hover:text-white transition">Technical</a>
+            <a href="#hub" class="hover:text-white transition">Developer Hub</a>
         </div>
-        <a href="https://t.me/SafeVaultProtocol" class="bg-white text-black text-xs font-bold px-6 py-2 rounded-full hover:bg-green-500 transition">ÖN TALEP</a>
+        <button class="border border-green-500 text-green-500 text-[10px] font-bold px-6 py-2 rounded-sm hover:bg-green-500 hover:text-black transition">PRE-ORDER</button>
     </nav>
 
-    <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative">
-        <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
-        
-        <span class="text-green-500 text-xs font-bold tracking-[0.5em] mb-4 animate-pulse">PROJECT V1: LAUNCHING SUMMER 2026</span>
-        <h1 class="text-6xl md:text-8xl font-900 mb-6 tracking-tighter leading-none">
-            GÜCÜ <span class="neon-green uppercase">HİSSET.</span><br>TEKNOLOJİYİ <span class="neon-green uppercase">KAZ.</span>
+    <section class="h-[80vh] flex flex-col items-center justify-center text-center px-6">
+        <h1 class="text-5xl md:text-8xl font-900 mb-6 tracking-tighter leading-none uppercase">
+            ZYNTHROX <span class="neon-green">V1</span>
         </h1>
-        <p class="max-w-2xl text-gray-400 text-lg md:text-xl mb-10 leading-relaxed font-light">
-            9x15 mm'lik saf mühendislik. ESP32 tabanlı mining gücü, lüks kutu tasarımı ve açık kaynaklı ruhuyla ZYNTHROX V1, pasif gelir ve geliştirme dünyasını birleştiriyor.
+        <p class="max-w-2xl text-gray-400 text-sm md:text-base mb-10 leading-relaxed font-light uppercase tracking-widest">
+            (TR) Kazmaya Başla | (EN) Start Mining | (FR) Commencer le Minage | (ES) Empezar a Minar | (RU) Начать майнинг | (HI) माइनिंग शुरू करें | (ZH) 开始挖矿
         </p>
-        <div class="flex flex-col md:flex-row gap-4">
-            <a href="#about" class="bg-green-600 text-black font-bold py-4 px-12 rounded-full hover:scale-105 transition shadow-[0_0_30px_rgba(22,163,74,0.4)]">DETAYLARI KEŞFET</a>
-            <a href="https://t.me/SafeVaultProtocol" class="glass py-4 px-12 rounded-full hover:bg-white/5 transition">TELEGRAM KATIL</a>
+        <div class="flex gap-4">
+            <a href="#hub" class="bg-white text-black font-bold py-4 px-10 text-xs tracking-widest hover:bg-green-500 transition">DOCS & CODE</a>
+            <a href="#specs" class="border border-white/20 py-4 px-10 text-xs tracking-widest hover:bg-white/5 transition">SPECS</a>
         </div>
     </section>
 
-    <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="zynthrox-card p-10 rounded-2xl">
-                <div class="text-4xl mb-6">🚀</div>
-                <h3 class="text-xl font-bold mb-4">Tak-Çalıştır Mining</h3>
-                <p class="text-gray-500 leading-relaxed text-sm">ZYNTHROX OS ön yüklü gelir. Wi-Fi'ye bağlan, cüzdanını gir ve kazmaya başla. Elektrik yakmaz, sessiz çalışır.</p>
-            </div>
-            <div class="zynthrox-card p-10 rounded-2xl bg-white/[0.01]">
-                <div class="text-4xl mb-6">🛠️</div>
-                <h3 class="text-xl font-bold mb-4">Açık Kaynak Özgürlüğü</h3>
-                <p class="text-gray-500 leading-relaxed text-sm">Arduino ve MicroPython uyumlu. Kendi kodlarını yükle, cihazı akıllı ev asistanına veya terminale dönüştür.</p>
-            </div>
-            <div class="zynthrox-card p-10 rounded-2xl">
-                <div class="text-4xl mb-6">📦</div>
-                <h3 class="text-xl font-bold mb-4">Premium Sunum</h3>
-                <p class="text-gray-500 leading-relaxed text-sm">Lazer kesim süngerli, mühürlü siyah lüks kutu. Güvenlikli antistatik ambalajıyla profesyonel bir deneyim.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="specs" class="py-20 bg-[#080808] border-y border-[#111]">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">Teknik <span class="text-green-500">Özellikler</span></h2>
-            <div class="space-y-6">
-                <div class="flex justify-between border-b border-[#222] pb-4">
-                    <span class="text-gray-400 font-light text-sm tracking-widest uppercase">İşlemci</span>
-                    <span class="font-bold text-sm">ESP32-WROOM-32D (Dual Core)</span>
+    <section id="hub" class="py-20 bg-[#080808] border-y border-white/5">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Developer <span class="neon-green">Hub</span></h2>
+            <p class="text-gray-500 text-sm mb-8">ZYNTHROX topluluğuna katılın, kod kütüphanelerine erişin ve global geliştirici ağının bir parçası olun.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass p-6 rounded-lg text-left">
+                    <h4 class="font-bold text-green-500 mb-2">GitHub Docs</h4>
+                    <p class="text-xs text-gray-400">Tüm şemalar ve ZYNTHROX OS kaynak kodları.</p>
                 </div>
-                <div class="flex justify-between border-b border-[#222] pb-4">
-                    <span class="text-gray-400 font-light text-sm tracking-widest uppercase">Boyut</span>
-                    <span class="font-bold text-sm text-green-500 uppercase">9x15 cm Custom Board</span>
-                </div>
-                <div class="flex justify-between border-b border-[#222] pb-4">
-                    <span class="text-gray-400 font-light text-sm tracking-widest uppercase">Güç Girişi</span>
-                    <span class="font-bold text-sm text-green-500 uppercase">3.3V - 5V DC (USB Uyumlu)</span>
-                </div>
-                <div class="flex justify-between border-b border-[#222] pb-4">
-                    <span class="text-gray-400 font-light text-sm tracking-widest uppercase">Soğutma</span>
-                    <span class="font-bold text-sm">Pasif Hava Soğutmalı Geniş Yüzey</span>
+                <div class="glass p-6 rounded-lg text-left">
+                    <h4 class="font-bold text-green-500 mb-2">Global Community</h4>
+                    <p class="text-xs text-gray-400">Geliştiricilerle anlık iletişim kanalı.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-[#111]">
-        <div class="text-2xl font-900 tracking-tighter neon-green mb-6 uppercase tracking-widest">ZYNTHROX</div>
-        <p class="text-gray-600 text-xs mb-8 uppercase tracking-[0.3em]">Malatya Teknoloji Üssü &copy; 2026</p>
-        <div class="flex justify-center gap-6 opacity-50">
-            </div>
+    <footer class="py-10 text-center text-[10px] text-gray-600 tracking-[0.4em] uppercase">
+        &copy; 2026 ZYNTHROX TECHNOLOGY CORP. - MALATYA HQ
     </footer>
 
 </body>
